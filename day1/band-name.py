@@ -2,7 +2,7 @@
 # Udemy 100 Days of Code: The complete Python Pro Bootcamp for 2022
 # Day 1 - assignment 1.16
 #1. Create a greeting for your program.
-print("Welcome to the Band Name Generator")
+print("Welcome to the Band Name Generator.")
 #2. Ask the user for the city that they grew up in.
 city = input("What's the name of the city you grew up in?\n")
 #3. Ask the user for the name of a pet.
