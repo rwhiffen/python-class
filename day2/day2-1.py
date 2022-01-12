@@ -4,7 +4,9 @@ two_digit_number = input("Type a two digit number: ")
 
 ####################################
 #Write your code below this line 👇
-# Excersize 1 day 2
+# Rich Whiffen - 1/11/2022
+# Udemy 100 Days of Code: The complete Python Pro Bootcamp for 2022
+# Day 2 - assignment 2.1
 # this seems clumsy - I suspect there's some easier ways
 # to do this but I'm playing along with what
 # we've been taught so far.
