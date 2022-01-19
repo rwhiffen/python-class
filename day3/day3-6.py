@@ -1,4 +1,4 @@
-# Rich Whiffen - 1/18/2022
+# Rich Whiffen - 1/19/2022
 # Udemy 100 Days of Code: The complete Python Pro Bootcamp for 2022
 # Day 3 - assignment 3.6 - Treasure Island
 #
