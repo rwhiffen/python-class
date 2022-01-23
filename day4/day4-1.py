@@ -9,7 +9,7 @@ random.seed(test_seed)
 #Write the rest of your code below this line 👇
 # Rich Whiffen - 1/19/2022
 # Udemy 100 Days of Code: The complete Python Pro Bootcamp for 2022
-# Day 3 - assignment 4.1 - Even or Odd
+# Day 4 - assignment 4.1 - Even or Odd
 # the seed makes the first random fuction predictable which is why it's used
 # the tests will pass then
 #
