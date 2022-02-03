@@ -4,11 +4,12 @@
 # Day 7 - assignment 7.5 - Hangman step 5
 # every step through this it resets to her version of it
 # so a lot of the variables and stuff I did in previous versions
-# are gone.  Lots of similarities though.   
+# are gone.  Lots of similarities though.
 
 import random
 import hangman_art
 import hangman_words
+debug=False
 #TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
 #Delete this line: word_list = ["ardvark", "baboon", "camel"]
 chosen_word = random.choice(hangman_words.word_list)
@@ -20,7 +21,8 @@ lives = 6
 #TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
 print(hangman_art.logo)
 #Testing code
-print(f'Pssst, the solution is {chosen_word}.')
+if debug:
+  print(f'Pssst, the solution is {chosen_word}.')
 
 #Create blanks
 display = []
@@ -40,7 +42,8 @@ while not end_of_game:
     #Check guessed letter
     for position in range(word_length):
         letter = chosen_word[position]
-        print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
+        if debug:
+          print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
         if letter == guess:
             display[position] = letter
 
@@ -51,6 +54,7 @@ while not end_of_game:
         if lives == 0:
             end_of_game = True
             print("You lose.")
+            print(f"The word was {chosen_word}")
 
     #Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
