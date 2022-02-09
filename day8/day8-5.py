@@ -1,6 +1,6 @@
 # Rich Whiffen - 2/8/2022
 # Udemy 100 Days of Code: The complete Python Pro Bootcamp for 2022
-# Day 8 - assignment 8.5 - step one in the ceasar cipher
+# Day 8 - assignment 8.5 - step two in the ceasar cipher
 # similar to hangman will be taking it in stages
 # it re-baselines with her code every time so it won't carry
 # through more than that.
