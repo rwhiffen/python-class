@@ -1,6 +1,6 @@
 # Rich Whiffen - 2/10/2022
 # Udemy 100 Days of Code: The complete Python Pro Bootcamp for 2022
-# Day 8 - assignment 9.1 - Student grades
+# Day 9 - assignment 9.1 - Student grades
 # workign with python dictionaries
 student_scores = {
   "Harry": 81,
