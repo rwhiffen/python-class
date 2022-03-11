@@ -36,13 +36,13 @@ operations = {
 }
 def calculator():
     print(logo)
-    num1 = int(input("what is the first number?:"))
+    num1 = float(input("what is the first number?:"))
     should_continue=True
     for symbol in operations:
       print(symbol)
     while should_continue   :
         operation_symbol= input("pick an operation to perform:")
-        num2 = int(input("what is the second number?:"))
+        num2 = float(input("what is the second number?:"))
 
         answer=""
 
