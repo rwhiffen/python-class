@@ -56,7 +56,9 @@ def compare_hands(user_score, computer_score):
     elif user_score == 0:
         return("    You win with a blackjack!")
     elif user_score > 21:
-            return("    You Lose ")
+            return("    You busted! You Lose ")
+    elif computer_score > 21:
+            return("    Dealer Busts! You Win ")
     elif user_score > computer_score:
         return("    You win ")
     elif user_score < computer_score:
