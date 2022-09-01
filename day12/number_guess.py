@@ -46,8 +46,8 @@ def game_loop():
             print("you are out of guesses")
             print(f"The number was {target_number}")
             user_guess = target_number
-        else:
+        elif user_guess != target_number:
             print("Guess Again.")
 
-            
+
 game_loop()
