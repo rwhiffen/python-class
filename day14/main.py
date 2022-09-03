@@ -12,7 +12,7 @@ from random import randint
 from art import logo, vs
 from game_data import data
 
-DEBUG=True
+DEBUG=False
 
 def format_data(account):
   #make the string that gets printed - I had this in the main game_loop
@@ -60,11 +60,11 @@ def game_loop():
         print(f"Compare A: {format_data(account_a)}.")
         print(vs)
         print(f"Against B: {format_data(account_b)}.")
-        user_guess=input(f"who has more followers:  A  or B ").lower()
+        user_guess=input("who has more followers:  A  or B ").lower()
         a_follower_count = account_a["follower_count"]
         b_follower_count = account_b["follower_count"]
         are_they_right=get_answer(user_guess, a_follower_count, b_follower_count)
-        
+
         if are_they_right:
             score += 1
             print(f"you're right! your score is {score}")
@@ -72,4 +72,10 @@ def game_loop():
             still_alive = False
             print(f"Nope! final score is {score}")
 
-game_loop()
+keep_playing=True
+while keep_playing:
+    game_loop()
+    yes_no=input("Play again (y/n)?").lower()
+    if yes_no == "n":
+        keep_playing=False
+        print("K-thx-bye!")
