@@ -14,11 +14,26 @@ from game_data import data
 
 DEBUG=True
 
+def format_data(account):
+  #make the string that gets printed - I had this in the main game_loop
+  #but I like the final solutions version better, so copied it.
+
+  name = account["name"]
+  description = account["description"]
+  country = account["country"]
+  if DEBUG:
+       print(f'{name}: {account["follower_count"]}')
+  return f"{name}, a {description}, from {country}"
+
+
 def get_account():
     #start out by just returning an int to get the logic working
     # then I'll change it to the data structure.
-    temp_stub = randint(1, 100)
-    return(temp_stub)
+    #temp_stub = randint(1, 100)
+
+    #Honestly didn't get this - had to look at the solution.
+    return random.choice(data)
+
 
 def get_answer(user_guess, account_a, account_b):
     #had to steal this logic - my attempt was way worse
@@ -42,9 +57,14 @@ def game_loop():
         account_b = get_account() # get a new random account_b to use.
         if DEBUG:
             print(f"A {account_a} B {account_b}")
-        user_guess=input("who has more followers:  A {place_holder) or B {place_holder}").lower()
-        are_they_right=get_answer(user_guess, account_a, account_b) #this will need to be the actual counts later not my randints
-
+        print(f"Compare A: {format_data(account_a)}.")
+        print(vs)
+        print(f"Against B: {format_data(account_b)}.")
+        user_guess=input(f"who has more followers:  A  or B ").lower()
+        a_follower_count = account_a["follower_count"]
+        b_follower_count = account_b["follower_count"]
+        are_they_right=get_answer(user_guess, a_follower_count, b_follower_count)
+        
         if are_they_right:
             score += 1
             print(f"you're right! your score is {score}")
