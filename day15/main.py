@@ -75,11 +75,17 @@ def take_money():
 def sufficient_funds(payment, cost):
     #stub did they give us enough money for the drink cost
     # will return a True/False
+    change = 0
     if DEBUG:
         print("sufficient_funds")
-    if payment >= cost:
+    if payment == cost:
+        return(True)
+    elif payment > cost:
+        change = round(payment - cost, 2)
+        print(f"Here is ${change} in change.")
         return(True)
     else:
+        print(f"Insufficent funds ${payment} refunded")
         return(False)
 
 def we_have_the_ingredients(ingredients):
@@ -124,7 +130,7 @@ def main_menu():
                 payment = take_money()
                 if sufficient_funds(payment, drink["cost"]):
                     make_the_drink(drink_choice, drink["ingredients"])
-                    money += payment
+                    money += drink["cost"]
             else:
                 print("Sorry we don't have the ingredients to make that")
 
