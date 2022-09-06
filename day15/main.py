@@ -11,7 +11,7 @@
 
 from art import logo
 
-DEBUG=True
+DEBUG=False
 
 
 MENU = {
@@ -41,12 +41,12 @@ MENU = {
 }
 
 resources = {
-    "water": 300,
-    "milk": 200,
+    "water": 900,
+    "milk": 500,
     "coffee": 100,
 }
 
-money=0
+money = 0
 
 def make_the_drink(drink_name, ingredients):
     #stub - here's where we subtract teh amount of ingredients
@@ -101,6 +101,7 @@ def we_have_the_ingredients(ingredients):
 
 def main_menu():
     # start with the main menu
+    global money # change the global variable
     still_open=True
     while still_open:
         print(logo)
