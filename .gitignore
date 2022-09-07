@@ -2,9 +2,11 @@
 __pycache__/
 *.py[cod]
 
-# ignore pycharm dir
+# ignore pycharm dir and DS_Store
 .idea/
+.DS_Store
 
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+ 
