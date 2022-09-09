@@ -4,7 +4,7 @@
 # Day 17 - making our own classes
 #
 # Quiz game - lots of sample code provided in the class files
-
+# Quesitons are from https://opentdb.com/ now.
 
 from question_model import Question
 from data import question_data
@@ -17,10 +17,10 @@ for item in question_data:
     if DEBUG:
         print("inside for loop")
         print(item["text"],item["answer"])
-    add_question = Question(item["text"],item["answer"])
+    add_question = Question(item["question"],item["correct_answer"])
     if DEBUG:
-        print (add_question.text)
-        print (add_question.answer)
+        print (add_question.question)
+        print (add_question.correct_answer)
 
     question_bank.append(add_question)
 
