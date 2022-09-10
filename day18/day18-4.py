@@ -15,10 +15,11 @@ import random
 
 timmy = Turtle() #create a new turtle object
 timmy.shape("turtle")
-
+timmy.pensize(15)
+timmy.speed("fastest")
 timmy.down()
 
-walk_length = 20
+walk_length = 200
 walk_steps=0
 walk_sides = 4 # grid walk
 angle=0 #init
@@ -26,12 +27,13 @@ angle=0 #init
 colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
 
 def take_walk(angle):
-        timmy.forward(25)
-        timmy.right(angle)
+        timmy.forward(30)
+        timmy.setheading(angle) #changed to setheading instead of right - faster
 
 while walk_steps < walk_length:
 
     turn=randint(1, walk_sides) # which direction to turn
+    # class solution did it differently - but they both work.
     angle=(360/walk_sides) * turn # calc angle and multiply by random turn amount
     take_walk(angle)
     timmy.color(random.choice(colors))
