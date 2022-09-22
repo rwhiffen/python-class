@@ -23,7 +23,7 @@ for name in merge_list:
     merged_letter = letter.replace(REPLACE_STRING, snipped_name)
     if DEBUG:
         print(f"{merged_letter}")
-    filename = "./output/readytosend/" + snipped_name + ".txt"
+    filename = "./output/readytosend/letter_for_" + snipped_name + ".txt"
     if DEBUG:
         print(f"{filename}")
     with open( filename, "w")  as new_letter:
