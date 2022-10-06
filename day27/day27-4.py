@@ -4,6 +4,7 @@
 # Day 27 - kwargs and args - tkinter graphics
 
 # working with layouts - switching the import line to remove the tkinter text.
+# using "place" instead of pack
 
 from tkinter import *
 
