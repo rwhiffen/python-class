@@ -10,7 +10,7 @@ from tkinter import *
 
 def button_clicked():
     miles = float(miles_input.get())
-    km = miles * 1.609
+    km = round(miles * 1.609)
     km_result_label.config(text=f"{km}")
 
 
