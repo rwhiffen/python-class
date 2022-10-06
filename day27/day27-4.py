@@ -38,12 +38,4 @@ input = Entry(width=10)
 print(input.get())
 input.grid(column=3, row=2)
 
-
-
-
-
-
-
-
-
 window.mainloop()
