@@ -1,4 +1,9 @@
-from tkinter import *
+# Rich Whiffen - 10/06/2022
+#
+# Udemy 100 Days of Code: The complete Python Pro Bootcamp for 2022
+# Day 29 - messagebox boxes
+
+# password manager (sorta)
 from tkinter import messagebox
 from random import choice, randint, shuffle
 import pyperclip
@@ -27,7 +32,7 @@ def generate_password():
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 def save():
-    
+
     website = website_entry.get()
     email = email_entry.get()
     password = password_entry.get()
