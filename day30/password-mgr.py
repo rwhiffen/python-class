@@ -43,6 +43,7 @@ def save():
                                                       f"\nPassword: {password} \nIs it ok to save?")
         if is_ok:
             with open("data.json", "w") as data_file:
+                data = json.load(data_file)
                 json.dump(new_data,data_file,indent=4)
 
 
