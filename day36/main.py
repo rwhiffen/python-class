@@ -1,3 +1,12 @@
+# Rich Whiffen - 11/21/2022
+#
+# Udemy 100 Days of Code: The complete Python Pro Bootcamp for 2022
+# Day 36 - working with APIs
+#
+# This is just the class download - My examples weren't nearly as
+# clean, but they did work - this is simpler than eracing my API keys
+
+
 import requests
 from twilio.rest import Client
 
