@@ -1,7 +1,7 @@
 # Rich Whiffen - 2/11/2022
 # Udemy 100 Days of Code: The complete Python Pro Bootcamp for 2022
 # Day 8 - assignment 9.2 - More dicionary syntax - this one wasn't really
-# an assignment - just typing and running examples to see how they work.
+# an assignment - just typing and running examples to see how they work.d
 
 ##Python Dictionaries
 
