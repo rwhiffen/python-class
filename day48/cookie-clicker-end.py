@@ -1,12 +1,27 @@
+# Rich Whiffen - 6/7/2023
+#
+# Udemy 100 Days of Code: The complete Python Pro Bootcamp for 2022
+# Day 48 - using Selenium 
+#
+# Cookie clicker code - this the class solution code - I'm just fixing it
+# going to give up for now - maybe I'll come back to this
+
+
+
 from selenium import webdriver
+from selenium.webdriver.chrome import service as fs
+from selenium.webdriver.common.by import By  
 import time
 
-chrome_driver_path = "/Users/RWhiff000/Applications/chromedriver_mac_arm64/chromedriver"
-driver = webdriver.Chrome(chrome_driver_path)
+chrome_driver = "/Users/RWhiff000/Applications/chromedriver_mac_arm64/chromedriver"
+chrome_service = fs.Service(executable_path=chrome_driver)
+
+driver = webdriver.Chrome(service=chrome_service)
 driver.get("http://orteil.dashnet.org/experiments/cookie/")
 
 #Get cookie to click on.
-cookie = driver.find_element_by_id("cookie")
+
+cookie = driver.find_element(By.CSS_SELECTOR, value="cookie")
 
 #Get upgrade item ids.
 items = driver.find_elements_by_css_selector("#store div")
@@ -22,7 +37,7 @@ while True:
     if time.time() > timeout:
 
         #Get all upgrade <b> tags
-        all_prices = driver.find_elements_by_css_selector("#store b")
+        all_prices = driver.find_element(By.CSS_SELECTOR, value="#store b")
         item_prices = []
 
         #Convert <b> text into an integer price.
